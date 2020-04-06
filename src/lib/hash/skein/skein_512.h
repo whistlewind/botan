@@ -34,11 +34,17 @@ class BOTAN_PUBLIC_API(2,0) Skein_512 final : public HashFunction
       size_t hash_block_size() const override { return 64; }
       size_t output_length() const override { return m_output_bits / 8; }
 
+      void set_key(const uint8_t key[], size_t key_len);
+
       HashFunction* clone() const override;
       std::unique_ptr<HashFunction> copy_state() const override;
       std::string name() const override;
       void clear() override;
+
+      std::string personalization() const { return m_personalization; }
    private:
+      friend class Skein_512_MAC;
+
       enum type_code {
          SKEIN_KEY = 0,
          SKEIN_CONFIG = 4,
