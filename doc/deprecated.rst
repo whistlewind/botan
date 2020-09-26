@@ -59,9 +59,9 @@ Deprecated Functionality
 This section lists cryptographic functionality which will be removed
 in a future major release.
 
-- Block ciphers GOST 28147 and XTEA.
+- Block cipher GOST 28147
 
-- Hash functions GOST 34.11-94
+- Hash function GOST 34.11-94
 
 - DLIES
 
