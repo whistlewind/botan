@@ -234,9 +234,6 @@ Other API deprecations
 - Directly accessing the member variables of types ``calendar_point``,
   ``ASN1_Attribute``, ``AlgorithmIdentifier``, and ``BER_Object``
 
-- Using a default output length for "SHAKE-128" and "SHAKE-256". Instead,
-  always specify the desired output length.
-
 - Currently if KDF interface is invoked with a requested output length larger
   than supported by the KDF, it returns instead a truncated key. In a future
   major release, instead if KDF is called with a length larger than it supports
