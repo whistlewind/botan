@@ -89,7 +89,7 @@ Deprecated Headers
   (still public) header, or contain functionality which is entirely
   deprecated. Consult the relevent file for more information.
   ``basefilt.h``, ``botan.h``, ``buf_filt.h``, ``cipher_filter.h``, ``comp_filter.h``,
-  ``compiler.h``, ``init.h``, ``key_filt.h``, ``lookup.h``, ``sm2_enc.h``, ``threefish.h``,
+  ``compiler.h``, ``init.h``, ``key_filt.h``, ``lookup.h``, ``sm2_enc.h``,
   ``xmss_key_pair.h``
 
 * The following headers have useful functionality but which we wish to
@@ -110,7 +110,6 @@ Deprecated Headers
   ``cascade.h``,
   ``cast128.h``,
   ``cbc.h``,
-  ``cbc_mac.h``,
   ``ccm.h``,
   ``cfb.h``,
   ``chacha20poly1305.h``,
@@ -144,7 +143,6 @@ Deprecated Headers
   ``ofb.h``,
   ``par_hash.h``,
   ``pbes2.h``,
-  ``pbkdf1.h``,
   ``pbkdf2.h``,
   ``pgp_s2k.h``,
   ``poly1305.h``,
