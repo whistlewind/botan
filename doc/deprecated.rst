@@ -69,8 +69,6 @@ in a future major release.
 
 - CBC-MAC
 
-- GCM support for 64-bit tags
-
 - Weak or rarely used ECC builtin groups including "secp160k1", "secp160r1",
   "secp160r2", "secp192k1", "secp224k1",
   "brainpool160r1", "brainpool192r1", "brainpool224r1", "brainpool320r1",

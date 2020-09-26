@@ -26,8 +26,7 @@ GCM_Mode::GCM_Mode(BlockCipher* cipher, size_t tag_size) :
       throw Invalid_Argument("Invalid block cipher for GCM");
 
    /* We allow any of the values 128, 120, 112, 104, or 96 bits as a tag size */
-   /* 64 bit tag is still supported but deprecated and will be removed in the future */
-   if(m_tag_size != 8 && (m_tag_size < 12 || m_tag_size > 16))
+   if(m_tag_size < 12 || m_tag_size > 16)
       throw Invalid_Argument(name() + ": Bad tag size " + std::to_string(m_tag_size));
    }
 

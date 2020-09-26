@@ -243,13 +243,6 @@ Out    = c3762df1ca787d32ae47c13bf19844cbaf1ae14d0b976afac52ff7d79bba9de0feb582d
 
 # Wycheproof GCM tests
 
-[AES-128/GCM(8)]
-Key = 5b9604fe14eadba931b0ccf34843dab9
-Nonce = 921d2507fa8007b7bd067d34
-AD = 00112233445566778899aabbccddeeff
-In = 001d0c231287c1182784554ca3a21908
-Out = 49d8b9783e911913d87094d1f63cc7651e348ba07cca2cf0
-
 [AES-128/GCM(12)]
 Key = 5b9604fe14eadba931b0ccf34843dab9
 Nonce = 921d2507fa8007b7bd067d34
