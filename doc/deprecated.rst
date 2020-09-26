@@ -65,8 +65,6 @@ in a future major release.
 
 - DLIES
 
-- MCEIES
-
 - CBC-MAC
 
 - Weak or rarely used ECC builtin groups including "secp160k1", "secp160r1",
