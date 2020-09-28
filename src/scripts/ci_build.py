@@ -121,7 +121,8 @@ def determine_flags(target, target_os, target_cpu, target_cc, cc_bin,
         test_cmd += ['--skip-tests=certstor_system']
 
     if target == 'coverage':
-        flags += ['--with-coverage-info', '--with-debug-info', '--test-mode']
+        flags += ['--with-coverage-info', '--with-debug-info', '--test-mode', '--optimize-for-size']
+        test_cmd += ['--test-threads=1'] # hack
 
     if target == 'valgrind':
         # valgrind in 16.04 has a bug with rdrand handling
@@ -316,7 +317,7 @@ def run_cmd(cmd, root_dir):
     cwd = None
 
     redirect_stdout = None
-    if len(cmd) > 3 and cmd[-2] == '>':
+    if len(cmd) >= 3 and cmd[-2] == '>':
         redirect_stdout = open(cmd[-1], 'w')
         cmd = cmd[:-2]
     if len(cmd) > 1 and cmd[0].startswith('indir:'):
@@ -645,7 +646,7 @@ def main(args=None):
 
             if have_prog('codecov'):
                 # If codecov exists assume we are on Travis and report to codecov.io
-                cmds.append(['codecov'])
+                cmds.append(['codecov', '>', 'codecov_stdout.log'])
             else:
                 # Otherwise generate a local HTML report
                 cmds.append(['genhtml', cov_file, '--output-directory', 'lcov-out'])
